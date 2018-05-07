@@ -4,7 +4,7 @@ import { onSignOut } from '../auth';
 
 class Logout extends Component {
 
-  _handleSubmit = () => {
+  handleSubmit = () => {
     let navigation = this.props.navigation;
       onSignOut().then(() => navigation.navigate("SignedOut"));
   }
@@ -20,7 +20,7 @@ class Logout extends Component {
      <Button
         backgroundColor="#03A9F4"
         title="SIGN OUT"
-        onPress={this._handleSubmit}
+        onPress={this.handleSubmit}
       />
     </ScrollView>
 

@@ -12,6 +12,15 @@ const User = t.struct({
   password: t.String
 });
 
+let options = {
+  fields: {
+    password: {
+      password: true,
+      secureTextEntry: true
+    }
+  }
+};
+
 class Login extends Component {
   constructor(props){
     super(props);
@@ -39,6 +48,7 @@ class Login extends Component {
             ref='form'
             type={User}
             value={this.state.value}
+            options={options}
           />
           <Button
             large

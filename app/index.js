@@ -13,8 +13,11 @@ export default class App extends Component {
 
   componentWillMount() {
     isSignedIn()
-      .then(response => this.setState({ signedIn: response, checkedSignIn: true }))
-      .catch(error => alert("Oops! Something broked"));
+      .then(response => this.setState({
+        signedIn: response,
+        checkedSignIn: true
+      }))
+      .catch(error => alert("Something went wrong!"));
   }
 
 

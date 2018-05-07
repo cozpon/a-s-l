@@ -5,7 +5,7 @@ import { Container, Left, Right, Header, Body, Title } from "native-base";
 
 class Home extends Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
   render() {
   let navigation = this.props.navigation;
