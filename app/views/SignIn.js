@@ -33,7 +33,10 @@ class Login extends Component {
   }
 
   _handleSubmit = () => {
+    console.log("YOOOO");
     const navigation = this.props.navigation;
+    const value = this.refs.form.getValue();
+    console.log(value, "Login VALUE");
     setStorage(true)
     onSignIn()
       .then(() => navigation.navigate("SignedIn"));

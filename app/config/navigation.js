@@ -1,12 +1,13 @@
 import React from "react";
 import { StackNavigator, TabNavigator, DrawerNavigator } from "react-navigation";
 
-import DrawerContent from "../views/Sidebar"
+import DrawerContent from "../views/Sidebar";
 
 import Profile from '../views/Profile';
 import Extra from '../views/Extra';
 
 import SignIn from '../views/SignIn';
+import SignUp from "../views/SignUp";
 
 import Home from '../views/Home';
 import Info from '../views/Info';
@@ -56,6 +57,12 @@ export const SignedIn = TabNavigator({
 });
 
 export const SignedOut = StackNavigator({
+  SignUp: {
+    screen: SignUp,
+    navigationOptions: {
+      title: "Sign Up"
+    }
+  },
   SignIn: {
     screen: SignIn,
     navigationOptions: {
@@ -83,6 +90,7 @@ export const RootNavigator = (signedIn = false) => {
       headerMode: "none",
       mode: "modal",
       initialRouteName: signedIn ? "SignedIn" : "SignedOut"
+      // sets routeName to signed in if "signed in" is true, else sets it to "signed out"
     }
   );
 };

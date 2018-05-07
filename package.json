@@ -17,12 +17,18 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "bcrypt": "^2.0.1",
     "body-parser": "^1.18.2",
     "compression": "^1.7.2",
+    "connect-redis": "^3.3.3",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
+    "mysql2": "^1.5.3",
     "native-base": "^2.3.8",
     "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.4.3",
+    "pg-hstore": "^2.3.2",
     "prop-types": "^15.6.0",
     "react": "16.0.0",
     "react-native": "0.50.3",
@@ -31,6 +37,7 @@
     "react-navigation": "^1.0.0-beta.23",
     "reactotron-react-native": "^1.14.0",
     "redis": "^2.8.0",
+    "sequelize": "^4.37.7",
     "tcomb-form-native": "^0.6.11"
   }
 }

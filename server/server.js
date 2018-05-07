@@ -9,7 +9,8 @@ const authenticatePassport = require('./library/passport');
 const db = require('./models');
 const routes = require('./routes');
 
-const PORT = require(`../config/${process.env.NODE_ENV}`).PORT;
+//const PORT = require(`../config/${process.env.NODE_ENV}`).PORT;
+const PORT = process.env.PORT || 4567;
 const app = express();
 
 app.use(compression());
@@ -18,7 +19,7 @@ app.use(bodyParser.urlencoded({ "extended" : false }));
 app.use(bodyParser.json());
 app.use(session({
   store: new redis(),
-  secret: 'Shade',
+  secret: 'Ricky',
   resave: false,
   saveUninitialized: false
 }));
